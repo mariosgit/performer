@@ -87,7 +87,7 @@ arm_sdk_clean:
 
 .PHONY: openocd_install
 
-OPENOCD_URL := https://downloads.sourceforge.net/project/openocd/openocd/0.10.0/openocd-0.10.0.tar.bz2
+OPENOCD_URL := https://downloads.sourceforge.net/project/openocd/openocd/0.12.0/openocd-0.12.0.tar.bz2
 OPENOCD_FILE := $(notdir $(OPENOCD_URL))
 OPENOCD_DIR := $(TOOLS_DIR)/openocd
 OPENOCD_BUILD_DIR := $(TOOLS_DIR)/openocd-build

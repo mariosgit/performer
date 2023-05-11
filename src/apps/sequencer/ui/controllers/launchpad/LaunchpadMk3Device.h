@@ -27,13 +27,21 @@ private:
     static constexpr uint8_t Cable = 1;
 
     inline uint8_t mapColor(int red, int green) const {
-        static const uint8_t map[] = {
+        // white diagonal, left=teal right=orange
+        static const uint8_t teal_map[] = {
+        //  g0  g1  g2  g3
+             0, 35, 34, 33, // r0
+            11,  1,  8, 33, // r1
+            10, 32,  2, 32, // r2
+             9,  9,  8,  3, // r3
+        };
+        static const uint8_t orig_map[] = {
         //  g0 g1 g2 g3
             0, 23, 22, 21, // r0
             7, 15, 18, 21, // r1
             6, 10, 14, 17, // r2
             5,  5,  9, 13, // r3
         };
-        return map[(red & 0x3) * 4 + (green & 0x3)];
+        return teal_map[(red & 0x3) * 4 + (green & 0x3)];
     }
 };
